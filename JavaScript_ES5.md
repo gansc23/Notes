@@ -231,7 +231,7 @@ isNaN(true);  // false, true可被转换为1
 
 > > #### <a id="3.4.6">3.4.6 `string` 类型</a>
 
-- 字符是16位的Unicode
+字符是16位的Unicode
 
 一些特殊字面量    | 含义
 ------ | ------
@@ -252,16 +252,16 @@ isNaN(true);  // false, true可被转换为1
 <br>
 
 **转型函数 `String(x)` 的规则：**
-  - 1）若不是`undefined`和`null`，则调用`toString()`方法并返回相应结果
-  - 2）否则返回 "undefined" 或 "null"
+  1. 若不是`undefined`和`null`，则调用`toString()`方法并返回相应结果
+  2. 否则返回 "undefined" 或 "null"
 
 <br>
 
 > > #### <a id="3.4.7">3.4.7 `object` 类型</a>
 
-- `var o = new Object(); <==> var o = new Object;  // 若无参数则可省略圆括号`
+`var o = new Object(); <==> var o = new Object;  // 若无参数则可省略圆括号`
 
-- ES中所有的对象都是`Object`的实例，都具有以下属性和方法：
+ ES中所有的对象都是`Object`的实例，都具有以下属性和方法：
   - `Constructor`属性：指向创建当前对象的构造函数。
   - `hasOwnProperty(propName)`方法：检查在当前的实例中（不是在实例的原型中）是否有指定的属性。
   - `isPrototypeOf(obj)`方法：判断此实例是否是传入的对象的原型
@@ -270,14 +270,18 @@ isNaN(true);  // false, true可被转换为1
   - `toString()`：返回对象的字符串表示
   - `toLocaleString()`：返回对象与执行环境的的地区对应的字符串表示
 
-<br>
-- 宿主对象（如BOM和DOM）是由宿主实现提供的，而ECMA-262不负责定义宿主对象，所有宿主对象不一定继承`Object`。
+
+宿主对象（如BOM和DOM）是由宿主实现提供的，而ECMA-262不负责定义宿主对象，所以宿主对象不一定继承`Object`。
 
 <br>
 
 > > #### <a id="3.5.1">3.5.1 一元操作符</a>
 
-- `++`、`--`、一元`+` 和 一元`-` 会对非数值类型的操作数使用 <a href="#Number()">*`Number(x)`*</a> 函数进行转换后再运算。
+`++`、`--`、一元`+` 和 一元`-` 会对非数值类型的操作数使用 <a href="#Number()">*`Number(x)`*</a> 函数进行转换后再运算。
+
+<br>
+
+> > #### <a id="3.5.2">3.5.2 位操作符</a>
 
 ---
 
