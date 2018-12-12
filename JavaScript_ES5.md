@@ -20,7 +20,7 @@
   - [3.4.3 null 类型](#3.4.3-null-类型)
   - [3.4.4 boolean 类型](#3.4.4-boolean-类型)
   - [3.4.5 number 类型](#3.4.5-number-类型)
-  - <a href="#head">`3.4.6 string 类型`</a>
+  - <a href="#3.4.6">`3.4.6 string 类型`</a>
 ---
 ---
 
@@ -148,7 +148,7 @@ object | 任何非null对象 | null
 
 >> ### 3.4.5 number 类型
 
->> ### <a id=”head” /> 3.4.6 fsdfds
+>> ### <a id="3.4.6" /> 3.4.6 fsdfds
 
 ---
 
