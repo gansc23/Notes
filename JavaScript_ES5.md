@@ -20,7 +20,7 @@
   - [3.4.3 null 类型](#3.4.3-null-类型)
   - [3.4.4 boolean 类型](#3.4.4-boolean-类型)
   - [3.4.5 number 类型](#3.4.5-number-类型)
-  - [3.4.6 string 类型](#3-4-6-stringtype)
+  - [3.4.6 string 类型](#3\.4\.6-stringtype)
   - <a href="#3.4.6">`3.4.6 string 类型`</a>
 ---
 ---
