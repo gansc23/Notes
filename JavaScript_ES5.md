@@ -40,9 +40,13 @@
 
 ### <a id="ch3">第3章 基本概念</a>
 
+<br>
+
 > > #### <a id="3.1.1">3.1.1 区分大小写</a>
 
 - 标识符命名区分大小写。
+
+<br>
 
 > > #### <a id="3.1.2">3.1.2 标识符</a>
 
@@ -51,10 +55,14 @@
 
  按照惯例，采用首字母小写的驼峰大小写命名方式
 
+<br>
+
 > > #### <a id="3.1.4">3.1.4 严格模式</a>
 
 - **在脚本文件顶部** 或者 **函数体顶部** 添加：`"use strict;"`
 - 在node命令行里启用严格模式：`$ node --use_strict xxx.js`
+
+<br>
 
 > #### <a id="3.2">3.2 关键字和保留字</a>
 
@@ -69,6 +77,8 @@ debugger*   let*        yield*
 
 - **关键字和保留字虽不能作为标识符名字，但可作为对象的属性名（不建议）**
 
+<br>
+
 > #### <a id="3.3">3.3 变量</a>
 
 - ES的变量是松散类型。
@@ -81,9 +91,13 @@ var msg = "hi",
     age = 29;
 ```
 
+<br>
+
 > #### <a id="3.4">3.4 数据类型</a>
 
 - 数据类型：`undefined, boolean, number, string, object(包括null), function`
+
+<br>
 
 > > #### <a id="3.4.1">3.4.1 `typeof` 操作符</a>
 
@@ -95,6 +109,8 @@ typeof(/^666/);  // => "object"
 ```
 
 - `function`其实也是一种`object`，但由于函数有一些特殊的属性，所以`typeof`操作符对`function`进行了区别。
+
+<br>
 
 > > #### <a id="3.4.2">3.4.2 `undefined` 类型</a>
 
@@ -110,9 +126,14 @@ typeof age; // "undefined"
 console.log(message); // "undefined"
 console.log(age);     // error
 ```
+
+<br>
+
 > > #### <a id="3.4.3">3.4.3 `null` 类型</a>
 
 - 实际上`undefined`继承于`null`，因此它们的相等性测试(==)返回true。
+
+<br>
 
 > > #### <a id="3.4.4">3.4.4 `boolean` 类型</a>
 
@@ -126,6 +147,8 @@ string | 非空字符串 | 空字符串
 object | 任何非null对象 | null
 
 - 布尔判断会自动对变量自动调用 `Boolean(x)` 进行转型。
+
+<br>
 
 > > #### <a id="3.4.5">3.4.5 `number` 类型</a>
 
@@ -204,6 +227,8 @@ isNaN(true);  // false, true可被转换为1
   - `"0xA" => 0; "0908.5" => 908.5;`
 - 空字符串转换为NaN："" => NaN
 
+<br>
+
 > > #### <a id="3.4.6">3.4.6 `string` 类型</a>
 
 - 字符是16位的Unicode
@@ -230,11 +255,13 @@ isNaN(true);  // false, true可被转换为1
   - 1）若不是`undefined`和`null`，则调用`toString()`方法并返回相应结果
   - 2）否则返回 "undefined" 或 "null"
 
+<br>
+
 > > #### <a id="3.4.7">3.4.7 `object` 类型</a>
 
 - `var o = new Object(); <==> var o = new Object;  // 若无参数则可省略圆括号`
 
-- ES中所有的对象都是`Object`的实例，都具有以下属性和方法：
+- ES中所有的对象都是`Object`的实例，都具有以下属性和方法：
   - `Constructor`属性：指向创建当前对象的构造函数。
   - `hasOwnProperty(propName)`方法：检查在当前的实例中（不是在实例的原型中）是否有指定的属性。
   - `isPrototypeOf(obj)`方法：判断此实例是否是传入的对象的原型
@@ -245,6 +272,8 @@ isNaN(true);  // false, true可被转换为1
 
 <br>
 - 宿主对象（如BOM和DOM）是由宿主实现提供的，而ECMA-262不负责定义宿主对象，所有宿主对象不一定继承`Object`。
+
+<br>
 
 > > #### <a id="3.5.1">3.5.1 一元操作符</a>
 
