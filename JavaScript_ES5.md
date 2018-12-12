@@ -148,7 +148,7 @@ object | 任何非null对象 | null
 
 >> ### 3.4.5 number 类型
 
->> ### <a id=”3.4.6”>3.4.6 fsdfds</a>
+>> ### <a id=”#3.4.6”>3.4.6 fsdfds</a>
 
 ---
 
