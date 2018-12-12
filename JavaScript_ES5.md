@@ -15,12 +15,15 @@
 - <a href="#3.2">3.2 关键字和保留字</a>
 - <a href="#3.3">3.3 变量</a>
 - <a href="#3.4">3.4 数据类型</a>
-  - <a href="#3.4.1">3.4.1 typeof 操作符</a>
-  - <a href="#3.4.2">3.4.2 undefined 类型</a>
-  - <a href="#3.4.3">3.4.3 null 类型</a>
-  - <a href="#3.4.4">3.4.4 boolean 类型</a>
-  - <a href="#3.4.5">3.4.5 number 类型</a> : <a href="#isNaN()">isNaN()</a>, <a href="#parseInt()">parseInt()</a>, <a href="#parseFloat()">parseFloat()</a>
-  - <a href="#3.4.6">3.4.6 string 类型</a>
+  - <a href="#3.4.1">3.4.1 `typeof` 操作符</a>
+  - <a href="#3.4.2">3.4.2 `undefined` 类型</a>
+  - <a href="#3.4.3">3.4.3 `null`</a>
+  - <a href="#3.4.4">3.4.4 `boolean` 类型</a>
+  - <a href="#3.4.5">3.4.5 `number` 类型</a> : <a href="#isNaN()">`isNaN()`</a>, <a href="#parseInt()">`parseInt()`</a>, <a href="#parseFloat()">`parseFloat()`</a>
+  - <a href="#3.4.6">3.4.6 `string` 类型</a>
+  - <a href="#3.4.7">3.4.7 `object` 类型</a>
+- *3.5* 操纵符
+  - <a href="#3.5.1">3.5.1 一元操作符</a>
 
 
 ---
@@ -170,7 +173,7 @@ isNaN(true);  // false, true可被转换为1
 //*/
 ```
 
- **`Number(x)` 转换函数（默认的转换函数）的行为：**
+ <a id="Number()">**`Number(x)` 转换函数（默认的转换函数）的行为：**</a>
 - 若是`undefined`，则为NaN
 - 若是`boolean`类型，则`true`和`false`分别转换为1和0
 - 若是`number`类型，则为自身
@@ -221,118 +224,35 @@ isNaN(true);  // false, true可被转换为1
 - 在调用数值的 `toString()` 方法时，还可以传递基数
   - `var n = 10; n.toString(8); // => 10`
 
+<br>
 
+**转型函数 `String(x)` 的规则：**
+  - 1）若不是`undefined`和`null`，则调用`toString()`方法并返回相应结果
+  - 2）否则返回 "undefined" 或 "null"
 
+> > #### <a id="3.4.7">3.4.7 `object` 类型</a>
+
+- `var o = new Object(); <==> var o = new Object;  // 若无参数则可省略圆括号`
+
+- ES中所有的对象都是`Object`的实例，都具有以下属性和方法：
+  - `Constructor`属性：指向创建当前对象的构造函数。
+  - `hasOwnProperty(propName)`方法：检查在当前的实例中（不是在实例的原型中）是否有指定的属性。
+  - `isPrototypeOf(obj)`方法：判断此实例是否是传入的对象的原型
+  - `propertyIsEnumerable(propName)`方法：判断指定的属性能否使用`for-in`进行枚举
+  - `valueOf()`：返回对象的布尔值、数值或字符串表示。一般与`toString()`的返回值相同
+  - `toString()`：返回对象的字符串表示
+  - `toLocaleString()`：返回对象与执行环境的的地区对应的字符串表示
+
+<br>
+- 宿主对象（如BOM和DOM）是由宿主实现提供的，而ECMA-262不负责定义宿主对象，所有宿主对象不一定继承`Object`。
+
+> > #### <a id="3.5.1">3.5.1 一元操作符</a>
+
+- `++`、`--`、一元`+` 和 一元`-` 会对非数值类型的操作数使用 <a href="#Number()">*`Number(x)`*</a> 函数进行转换后再运算。
 
 ---
 
 #### 第4章 JavaScript 简介
-
----
-
-#### 第5章 JavaScript 简介
-
----
-
-#### 第6章 JavaScript 简介
-
----
-
-#### 第7章 JavaScript 简介
-
----
-
-#### 第8章 JavaScript 简介
-
----
-
-#### 第9章 JavaScript 简介
-
----
-
-#### 第10章 JavaScript 简介
-
----
-
-#### 第11章 JavaScript 简介
-
----
-
-#### 第12章 JavaScript 简介
-
----
-
-#### 第13章 JavaScript 简介
-
----
-
-#### 第14章 JavaScript 简介
-
----
-
-#### 第15章 JavaScript 简介
-
----
-
-#### 第16章 JavaScript 简介
-
----
-
-#### 第17章 JavaScript 简介
-
----
-
-#### 第18章 JavaScript 简介
-
----
-
-#### 第19章 JavaScript 简介
-
----
-
-#### 第20章 JavaScript 简介
-
----
-
-#### 第21章 JavaScript 简介
-
----
-
-#### 第22章 JavaScript 简介
-
----
-
-#### 第23章 JavaScript 简介
-
----
-
-#### 第24章 JavaScript 简介
-
----
-
-#### 第25章 JavaScript 简介
-
----
-
-#### 附录A JavaScript 简介
-
----
-
-#### 附录B JavaScript 简介
-
----
-
-#### 附录C JavaScript 简介
-
----
-
-#### 附录D JavaScript 简介
-
-
-
-
-
-
 
 
 
